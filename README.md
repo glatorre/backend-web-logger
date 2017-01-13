@@ -1,2 +1,2 @@
 # backend-web-logger
-A logger for Web application
+A logger for Web applications.

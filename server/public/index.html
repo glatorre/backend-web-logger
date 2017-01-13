@@ -1,0 +1,14 @@
+<html>
+	<head></head>
+	<body>
+		<h1>Test page</h1>
+		<textarea id="log_area"></textarea>
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+		<script>
+			var socket = io();
+  			socket.on('log', function (data) {
+    			document.getElementById("log_area").value += data.msg + "\n";
+  			});
+		</script>
+	</body>
+</html>
