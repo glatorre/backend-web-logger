@@ -1,7 +1,7 @@
 {
 	"server":{
 		"url":"http://localhost",
-		"port": 3000
+		"port": 3600
 	},
 	"app":{
 		"token":"123456789"

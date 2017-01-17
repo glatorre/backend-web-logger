@@ -1,14 +1,36 @@
-<html>
-	<head></head>
-	<body>
-		<h1>Test page</h1>
-		<textarea id="log_area"></textarea>
-		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-		<script>
-			var socket = io();
-  			socket.on('log', function (data) {
-    			document.getElementById("log_area").value += data.msg + "\n";
-  			});
-		</script>
-	</body>
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <title>Backend Web Logger</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    </head>
+
+    <body>
+        <div class="main container" ng-controller="MainController">
+            <h1>App Token <input ng-model="appToken" type="text"> <button class="btn btn-lg btn-success" ng-click="setToken()">Log</button></h1>
+            <textarea id="logArea" ng-model="logContent" style="height:500px; width:100%"></textarea>
+            <!--ng-view></ng-view-->
+        </div>
+
+        <footer>
+            <div class="container">
+                <p><a class="github" href="https://github.com/gnuwilliam">Giuseppe La Torre</a></p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="assets/bower/angular/angular.js"></script>
+        <script type="text/javascript" src="assets/bower/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript"
+                src="http://localhost:3600/faye/client.js">
+        </script>
+
+        <script type="text/javascript" src="app/app.js"></script>
+        <!--script type="text/javascript" src="app/config/config.js"></script-->
+        <script type="text/javascript" src="app/routes/routes.js"></script>
+        <script type="text/javascript" src="app/controllers/mainController.js"></script>
+        <script type="text/javascript" src="app/controllers/logController.js"></script>
+        <script type="text/javascript" src="app/services/mainService.js"></script>
+    </body>
 </html>
