@@ -5,7 +5,7 @@ html, body {
 .container {
     margin: auto;
     position: relative;
-    width: 960px;
+    width: 90%;
 }
 
 .main {
@@ -131,4 +131,6 @@ footer a:hover {
 
 #logArea{
     padding: 10px;
+    height:500px;
+    width:100%;
 }

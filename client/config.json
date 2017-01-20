@@ -1,6 +1,6 @@
 {
 	"server":{
-		"url":"http://titanium.diit.unict.it",
+		"url":"http://localhost",
 		"port": 3600
 	}
 }

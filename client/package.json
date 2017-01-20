@@ -9,6 +9,7 @@
   "author": "Giuseppe La Torre",
   "license": "ISC",
   "dependencies": {
+    "dateformat": "^2.0.0",
     "request": "^2.79.0"
   }
 }

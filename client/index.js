@@ -1,4 +1,5 @@
 var request = require('request');
+var dateformat = require('dateformat');
 var config = require('./config.json');
 
 _log = console.log;
@@ -10,11 +11,12 @@ function Logger(_appToken){
 }
 
 console.log = function(msg){
+	var now = dateformat(new Date(), "dd mmm yy | hh:MM:ss");
+	//_log(now);
 	request({
     	url: config.server.url + ':' + config.server.port + "/log",
     	method: "POST",
-    	//json: {msg:msg, token:config.app.token}
-		json: {msg:msg, token:appToken}
+		json: {msg: now +": " + msg, token:appToken}
     },function(error, response, body){
     	if(error){_log("error")};
     });
