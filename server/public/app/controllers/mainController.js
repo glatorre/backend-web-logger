@@ -11,7 +11,7 @@ App.controller('MainController', ['$scope', function ($scope) {
         }
         $scope.subscription = client.subscribe('/log/'+$scope.appToken, function(message) {
             document.getElementById("logArea").value += message.content + "\n";
-            document.getElementById("logtarea").scrollTop = document.getElementById("logtarea").scrollHeight;
+            document.getElementById("logArea").scrollTop = document.getElementById("logArea").scrollHeight;
         });
     }
 }]);
