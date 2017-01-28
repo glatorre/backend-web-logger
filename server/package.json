@@ -12,6 +12,7 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "faye": "^1.2.3",
-    "method-override": "^2.3.7"
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.9"
   }
 }
