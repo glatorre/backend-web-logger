@@ -11,7 +11,7 @@ module.exports = function(expressApp, fayeClient){
     
     expressApp.post('/log', function(req, res){
         //fayeClient.publish('/log/'+req.body.token, {content: req.body.msg});
-        fayeClient.publish('/log/'+req.body.token, req.body);
+        fayeClient.publish('/log/'+req.body.appToken, req.body);
         logController.saveLog(req.body);
         res.end();
     });

@@ -10,7 +10,7 @@ App.controller('MainController', ['$scope', function ($scope) {
             $scope.subscription.cancel();
         }
         $scope.subscription = client.subscribe('/log/'+$scope.appToken, function(message) {
-            document.getElementById("logArea").value += message.content + "\n";
+            document.getElementById("logArea").value += message.msg + "\n";
             document.getElementById("logArea").scrollTop = document.getElementById("logArea").scrollHeight;
         });
     }
